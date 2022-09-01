@@ -1,0 +1,292 @@
+/* global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4,
+h5 {
+  font-size: 2rem;
+}
+
+p,
+a,
+li,
+label,
+input,
+button {
+  font-size: 2.5rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.main-head {
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+nav .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 10rem;
+}
+nav .logo h1 {
+  margin: 2rem;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex: 1 1 40rem;
+}
+
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.intro h2 {
+  font-size: 6rem;
+  padding-top: 2rem;
+  background: #38d39f;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.intro h3 {
+  font-size: 4rem;
+  padding: 2rem 0rem;
+}
+
+.splash {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  height: 88%;
+  z-index: -1;
+}
+
+.intro-social {
+  margin-top: 5rem;
+}
+.intro-social a {
+  margin-right: 4rem;
+}
+
+.intro-text,
+.intro-images {
+  flex: 1 1 40rem;
+}
+
+#vapors {
+  -webkit-animation: vapor 4s ease-in infinite;
+          animation: vapor 4s ease-in infinite;
+}
+
+@-webkit-keyframes vapor {
+  from {
+    transform: translateY(20%);
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(-40%);
+    opacity: 0%;
+  }
+}
+
+@keyframes vapor {
+  from {
+    transform: translateY(20%);
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(-40%);
+    opacity: 0%;
+  }
+}
+#face_with_headphones {
+  -webkit-animation: me 1s ease-in-out infinite alternate;
+          animation: me 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes me {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+#leaves {
+  -webkit-animation: leaves 1s ease-in-out infinite alternate 0.5s;
+          animation: leaves 1s ease-in-out infinite alternate 0.5s;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@-webkit-keyframes leaves {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(4deg);
+  }
+}
+
+@keyframes leaves {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(4deg);
+  }
+}
+.active {
+  background: rgb(98, 98, 98);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.projects img {
+  width: 600px;
+  height: 400px;
+  border: none;
+  border-radius: 4rem;
+}
+.projects h2 {
+  margin-bottom: 2rem;
+}
+
+.search,
+.click {
+  flex: 1 1 40rem;
+}
+
+.form-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.form-section form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 20px gray;
+  border-radius: 2rem;
+  padding: 2rem 10rem;
+}
+.form-section form input,
+.form-section form textarea {
+  margin: 2rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+}
+.form-section form input:focus,
+.form-section form textarea:focus {
+  outline: 1px solid rgb(76, 76, 184);
+}
+.form-section form textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+.form-section form button {
+  width: 60%;
+  padding: 2rem;
+  background: #154353;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+}
+.form-section form button:focus {
+  background: rgb(51, 105, 107);
+}
+
+footer {
+  background: #154353;
+  min-height: 10vh;
+  color: white;
+  padding: 0% 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+footer ul {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+footer h4 {
+  flex: 1 1 40rem;
+  letter-spacing: 0.8px;
+  word-spacing: 4px;
+}/*# sourceMappingURL=style.css.map */

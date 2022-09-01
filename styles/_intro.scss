@@ -1,0 +1,112 @@
+.main-head {
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+    h1 {
+      margin: 2rem;
+    }
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
+}
+
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(space-between, center, row);
+  h2 {
+    font-size: 6rem;
+    padding-top: 2rem;
+    background: #38d39f;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h3 {
+    font-size: 4rem;
+    padding: 2rem 0rem;
+  }
+}
+
+.splash {
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  height: 88%;
+  z-index: -1;
+}
+
+.intro-social {
+  margin-top: 5rem;
+  a {
+    margin-right: 4rem;
+  }
+}
+
+.intro-text,
+.intro-images {
+  flex: 1 1 40rem;
+}
+
+#vapors {
+  animation: vapor 4s ease-in infinite;
+}
+
+@keyframes vapor {
+  from {
+    transform: translateY(20%);
+    opacity: 100%;
+  }
+  to {
+    transform: translateY(-40%);
+    opacity: 0%;
+  }
+}
+
+#face_with_headphones {
+  animation: me 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+
+#leaves {
+  animation: leaves 1s ease-in-out infinite alternate 0.5s;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes leaves {
+  from {
+    transform: rotateZ(-4deg);
+  }
+  to {
+    transform: rotateZ(4deg);
+  }
+}
+
+.active {
+  background: rgb(98, 98, 98);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
